@@ -1,0 +1,23 @@
+//vbs
+
+Set Conn = CreateObject("ADODB.Connection")
+Set rs = CreateObject("ADODB.Recordset")
+
+email.Subject = sSubject
+email.HTMLBody = sBody
+
+Set emailConfig = email.Configuration
+
+.
+.
+.
+.
+.
+emailConfig.Fields.Update
+
+email.BodyPart.Charset = "utf-8" -- Need for Korean
+email.HTMLBodyPart.Charset ="utf-8" -- Need for Korean
+
+email.Send
+
+Set email = Nothing
